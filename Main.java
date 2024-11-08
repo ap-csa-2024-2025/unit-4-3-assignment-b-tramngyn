@@ -4,14 +4,22 @@ public class Main
 {
   public static void main(String[] args)
   {
-    // You can test your method here
-    // System.out.println(isPrime(1));
-    // System.out.println(isPrime(17));
+    System.out.println(isPrime(1));
+    System.out.println(isPrime(11));
+    System.out.println(isPrime(35));
   }
 
   public static boolean isPrime(int N)
   {
-    // TODO: Replace and write your code below
-    return false;
+    if (N == 1) {
+      return false;
+    }
+
+    for (int x = 2; x < N; x++) {
+      if (N % x == 0) {
+        return false;
+      }
+    }
+    return true;
   }
 }
